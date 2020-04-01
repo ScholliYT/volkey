@@ -140,28 +140,28 @@ Return Isfunc( Callback ) ? %Callback%( "", 0 ) : sOutput
 }
 
 ^Volume_Down::
-newvolume = % StdOutStream( "volkey\volkey.exe -a Spotify.exe -1" )
-SplashTextOn, , , %newvolume%
-Sleep, 500
-SplashTextOff
-return
-
-^Volume_Up::
-newvolume = % StdOutStream( "volkey\volkey.exe -a Spotify.exe 1" )
-SplashTextOn, , , %newvolume%
-Sleep, 500
-SplashTextOff
-return
-
-^+Volume_Down::
 newvolume = % StdOutStream( "volkey\volkey.exe -a Spotify.exe -5" )
 SplashTextOn, , , %newvolume%
 Sleep, 500
 SplashTextOff
 return
 
-^+Volume_Up::
+^Volume_Up::
 newvolume = % StdOutStream( "volkey\volkey.exe -a Spotify.exe 5" )
+SplashTextOn, , , %newvolume%
+Sleep, 500
+SplashTextOff
+return
+
+^+Volume_Down::
+newvolume = % StdOutStream( "volkey\volkey.exe -a Spotify.exe -10" )
+SplashTextOn, , , %newvolume%
+Sleep, 500
+SplashTextOff
+return
+
+^+Volume_Up::
+newvolume = % StdOutStream( "volkey\volkey.exe -a Spotify.exe 10" )
 SplashTextOn, , , %newvolume%
 Sleep, 500
 SplashTextOff
